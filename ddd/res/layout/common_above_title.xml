@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#99ccff" >
+
+    <LinearLayout
+        android:id="@+id/linear_above_toHome"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="#00c2f9"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_head_left"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/button_above_more" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="菜单"
+            android:textSize="15dp"
+            android:textColor="#fff"
+    
+    />
+        
+    </LinearLayout>
+
+    
+    <TextView
+         android:id="@+id/tv_common_above_head"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:text="梧州蝶山区富民三路"
+        android:background="#99ccff"
+        android:gravity="center"
+        android:textColor="#fff" />
+
+</RelativeLayout>

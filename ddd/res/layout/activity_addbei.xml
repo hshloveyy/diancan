@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/gray_bg"
+        >
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            
+            android:orientation="vertical" >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               >
+              
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+               
+
+                android:textColor="#ff555555"
+                android:paddingLeft="12dp"
+                android:paddingBottom="50dp"
+                android:textSize="20.0sp" 
+                android:hint="写下你最想说的话吧"
+                android:background="@color/white"
+                android:textColorHint="#ff6688" />
+            
+               
+             
+           </LinearLayout>
+
+        </LinearLayout>
+     
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="立即留言评论"
+            android:textColor="#cc0000"
+            android:background="#99ccff"
+            android:drawablePadding="25dip"
+            android:textSize="25sp"
+            
+            />
+    </LinearLayout>
+
+ 
+</RelativeLayout>
