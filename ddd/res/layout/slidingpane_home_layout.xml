@@ -20,9 +20,15 @@
         android:fadingEdgeLength="0.0sp"
         android:scrollbars="none" >
     </com.zdp.family.cookbook.util.RefreshableListView>
-	<include
-        android:id="@+id/restaurant_bottom"
+<!-- 	<include -->
+<!--         android:id="@+id/restaurant_bottom" -->
+<!--         android:layout_height="0dp" -->
+<!--         android:layout_weight="1" -->
+<!--         layout="@layout/food_cart_item" /> -->
+		<Button
+        android:id="@+id/diancan_bottom"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        layout="@layout/food_cart_item" />
+        android:text="点餐" />
 </LinearLayout>

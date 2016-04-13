@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView.FindListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
@@ -60,6 +61,9 @@ public class HomeFragment extends Fragment implements OnClickListener {
 	private int add = 7;
 	private View listHeaderView;
 	private ImageView head_pic;
+	
+	private Button diancanButton;
+	
 //	@InjectView(R.id.food_list_shipping_fee)
 //	private TextView food_list_shipping_fee;
 
@@ -68,10 +72,9 @@ public class HomeFragment extends Fragment implements OnClickListener {
 			switch (msg.what) {
 			case 1:
 //				adapter = new HomePageRestaurantAdapter(getActivity(), mlist);
-				adapter = new FoodListAdapter(getActivity(), mlist, (TextView)currentView.findViewById(R.id.food_list_shipping_fee));
-				mListView.setAdapter(adapter);
+//				adapter = new FoodListAdapter(getActivity(), mlist, (TextView)currentView.findViewById(R.id.food_list_shipping_fee));
+				mListView.setAdapter(null);
 				mListView.addHeaderView(listHeaderView);
-
 				break;
 
 			default:
@@ -100,6 +103,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 		listHeaderView = getActivity().getLayoutInflater().inflate(
 				R.layout.home_head_view, null);
 		head_pic = (ImageView) listHeaderView.findViewById(R.id.iv_home_head);
+		diancanButton = (Button)currentView.findViewById(R.id.diancan_bottom);
 		openMenu.setOnClickListener(this);
 		getDate();
 		setListener();
@@ -142,6 +146,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 				startActivity(intent);
 			}
 		});
+		diancanButton.setOnClickListener(this);
 	}
 
 	private class NewDataTask extends AsyncTask<Void, Void, String> {
@@ -190,11 +195,19 @@ public class HomeFragment extends Fragment implements OnClickListener {
 			});
 
 			break;
+		case R.id.diancan_bottom:
+			Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
+			startActivity(intent);
+			break;
 		}
 	}
 
 	private void getDate() {
 
+		Message msg = new Message();
+		msg.what = 1;
+		handler.sendMessage(msg);
+		/*
 		mlist = new ArrayList<Food>();
 		StringRequest request = new StringRequest(Request.Method.POST,
 				Config.IP + "food?method=find",
@@ -230,6 +243,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 
 		};
 		BaseApplication.getRequestQueue().add(request);
+		*/
 	}
 
 }

@@ -315,15 +315,15 @@ containing a value of this type.
         public static final int book_time=0x7f0800da;
         public static final int bottom_warning_dimiss=0x7f080118;
         public static final int bottom_warning_title=0x7f080119;
-        public static final int btn_abouts=0x7f0803b2;
+        public static final int btn_abouts=0x7f0803b3;
         public static final int btn_close_login_panel=0x7f080010;
         public static final int btn_close_regist_panel=0x7f08001f;
-        public static final int btn_gift=0x7f0803b0;
-        public static final int btn_home=0x7f0803ae;
-        public static final int btn_invitation=0x7f0803b1;
+        public static final int btn_gift=0x7f0803b1;
+        public static final int btn_home=0x7f0803af;
+        public static final int btn_invitation=0x7f0803b2;
         public static final int btn_login=0x7f08000d;
         public static final int btn_login_operate=0x7f080018;
-        public static final int btn_order=0x7f0803af;
+        public static final int btn_order=0x7f0803b0;
         public static final int btn_regist=0x7f08000e;
         public static final int btn_regist_operate=0x7f08001e;
         public static final int btn_start_login=0x7f080012;
@@ -396,6 +396,7 @@ containing a value of this type.
         public static final int description_view=0x7f080329;
         public static final int dialog_main_title=0x7f0801f3;
         public static final int dialog_sub_title=0x7f0801f4;
+        public static final int diancan_bottom=0x7f0803a8;
         public static final int dianping_head=0x7f080396;
         public static final int drawer_about_content=0x7f08024b;
         public static final int drawer_footer=0x7f08024c;
@@ -674,7 +675,7 @@ containing a value of this type.
         public static final int image_loading=0x7f08006b;
         public static final int image_view=0x7f0802ce;
         public static final int indicator=0x7f0801f2;
-        public static final int invitation_head=0x7f0803a8;
+        public static final int invitation_head=0x7f0803a9;
         public static final int invitation_list_item=0x7f080377;
         public static final int invitation_webview=0x7f08029d;
         public static final int invite_code=0x7f0801a3;
@@ -691,7 +692,7 @@ containing a value of this type.
         public static final int item_size=0x7f08012d;
         public static final int iv_head_left=0x7f080388;
         public static final int iv_home_head=0x7f080397;
-        public static final int iv_login=0x7f0803ac;
+        public static final int iv_login=0x7f0803ad;
         public static final int iv_photo=0x7f080172;
         public static final int iv_regist_email=0x7f080036;
         public static final int iv_regist_password=0x7f080038;
@@ -704,7 +705,7 @@ containing a value of this type.
         public static final int list_restaurant_detail=0x7f0803a0;
         public static final int list_view=0x7f0801ef;
         public static final int list_view_food_ugc_image=0x7f0802c8;
-        public static final int listview=0x7f0803b4;
+        public static final int listview=0x7f0803b5;
         public static final int ll=0x7f080277;
         public static final int ll_login_panel=0x7f08000f;
         public static final int ll_login_panel_edit=0x7f080011;
@@ -734,7 +735,7 @@ containing a value of this type.
         public static final int make_order_fragment=0x7f080198;
         public static final int menu_container=0x7f080246;
         public static final int menu_icon=0x7f0802bf;
-        public static final int menu_layout=0x7f0803ad;
+        public static final int menu_layout=0x7f0803ae;
         public static final int menu_message=0x7f0802c1;
         public static final int menu_title=0x7f0802c0;
         public static final int message_view=0x7f0801ea;
@@ -823,7 +824,7 @@ containing a value of this type.
         public static final int order_detail_status=0x7f0800bb;
         public static final int order_divider1=0x7f0800bc;
         public static final int order_error_content=0x7f0802d4;
-        public static final int order_head=0x7f0803b3;
+        public static final int order_head=0x7f0803b4;
         public static final int order_history_address=0x7f08008f;
         public static final int order_history_address_list=0x7f080091;
         public static final int order_history_list=0x7f0802d5;
@@ -1069,10 +1070,10 @@ containing a value of this type.
         public static final int shortcut=0x7f08014f;
         public static final int showPsgs=0x7f080392;
         public static final int shutter=0x7f0801dd;
-        public static final int slidingpane_content=0x7f0803ab;
+        public static final int slidingpane_content=0x7f0803ac;
         public static final int slidingpane_gift=0x7f0803a5;
-        public static final int slidingpane_menu=0x7f0803aa;
-        public static final int slidingpanellayout=0x7f0803a9;
+        public static final int slidingpane_menu=0x7f0803ab;
+        public static final int slidingpanellayout=0x7f0803aa;
         public static final int sms_verification_view=0x7f0801a5;
         public static final int sns_setting=0x7f0800e2;
         public static final int sort_restaurant_text=0x7f08031e;

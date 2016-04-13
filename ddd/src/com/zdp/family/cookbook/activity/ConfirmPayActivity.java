@@ -132,12 +132,12 @@ public class ConfirmPayActivity extends Activity {
 
 	private void setText() {
 		Intent intent = getIntent();
-		list = intent.getStringArrayListExtra("foodname");
+		names = intent.getStringExtra("foodList");
 
-		for (int i = 0; i < list.size(); i++) {
-
-			names += list.get(i) + "; ";
-		}
+//		for (int i = 0; i < list.size(); i++) {
+//
+//			names += list.get(i) + "; ";
+//		}
 		SharedPreferences spf = getSharedPreferences("checkLogin", MODE_PRIVATE);
 		stationCode.setText(names + "");
 		address.setText(spf.getString("address", ""));

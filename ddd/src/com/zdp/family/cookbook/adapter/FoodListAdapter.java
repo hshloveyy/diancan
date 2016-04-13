@@ -187,6 +187,16 @@ public class FoodListAdapter extends BaseAdapter implements
 		}
 		return total;
 	}
+	
+	public String getShopCar(){
+		StringBuffer str = new StringBuffer();
+		for (int i = 0; i < foods.size(); i++) {
+			if(mFoodsNum[i] > 0){
+				str.append(foods.get(i).getName() + "x" + mFoodsNum[i] + ";");
+			}
+		}
+		return str.toString();
+	}
 
 	private ViewGroup createAnimLayout() {
 		ViewGroup rootView = (ViewGroup) mActivity.getWindow().getDecorView();
@@ -283,7 +293,7 @@ public class FoodListAdapter extends BaseAdapter implements
 			holder = (HeaderViewHolder) convertView.getTag();
 		}
 
-		CharSequence headerChar = mFoods[position].split("-")[0];
+		CharSequence headerChar = foods.get(position).getName();
 		holder.text.setText(headerChar);
 
 		return convertView;
@@ -291,7 +301,7 @@ public class FoodListAdapter extends BaseAdapter implements
 
 	@Override
 	public long getHeaderId(int position) {
-		return mFoods[position].subSequence(0, 1).charAt(0);
+		return foods.get(position).getName().subSequence(0, 1).charAt(0);
 	}
 
 	@Override
