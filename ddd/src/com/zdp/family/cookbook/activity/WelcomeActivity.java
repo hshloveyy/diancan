@@ -37,9 +37,9 @@ public class WelcomeActivity extends Activity {
 			}
 		});
 
-		Intent intent = new Intent (WelcomeActivity.this,HomePageActivity.class);	
-		startActivity(intent);
-		finish();
+//		Intent intent = new Intent (WelcomeActivity.this,HomePageActivity.class);	
+//		startActivity(intent);
+//		finish();
 	}
 
 
