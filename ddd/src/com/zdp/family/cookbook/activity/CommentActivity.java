@@ -74,6 +74,7 @@ public class CommentActivity extends Activity implements OnClickListener{
 						if ("ok".equals(arg0)) {
 							Toast.makeText(getApplicationContext(), "评论成功", 2)
 									.show();
+							finish();
 						} else {
 							Toast.makeText(getApplicationContext(), "评论失败", 2)
 									.show();
@@ -92,8 +93,8 @@ public class CommentActivity extends Activity implements OnClickListener{
 				Map<String, String> hashMap = new HashMap<String, String>();
 				// 添加
 				hashMap.put("name", username);
-				hashMap.put("id", intent.getStringExtra("id"));
-				hashMap.put("foodname", intent.getStringExtra("name"));
+				hashMap.put("id", "0");
+				hashMap.put("foodname", Config.RESTAURANT_NAME);
 				
 				hashMap.put(
 						"username",

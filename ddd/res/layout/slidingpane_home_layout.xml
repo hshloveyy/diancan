@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:orientation="vertical" >
 
     <include
         android:id="@+id/home_head"
@@ -13,25 +13,46 @@
         android:id="@+id/mineList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="8"
         android:cacheColorHint="#00000000"
         android:dividerHeight="1dip"
-        android:layout_weight="8"
         android:drawSelectorOnTop="false"
         android:fadingEdgeLength="0.0sp"
         android:scrollbars="none" >
     </com.zdp.family.cookbook.util.RefreshableListView>
-<!-- 	<include -->
-<!--         android:id="@+id/restaurant_bottom" -->
-<!--         android:layout_height="0dp" -->
-<!--         android:layout_weight="1" -->
-<!--         layout="@layout/food_cart_item" /> -->
-		<Button
-        android:id="@+id/diancan_bottom"
+    <!-- <include -->
+    <!-- android:id="@+id/restaurant_bottom" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- layout="@layout/food_cart_item" /> -->
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:background="@drawable/selector_blue_corners_button"
-        android:text="点餐" />
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/diancan_bottom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_corners_button"
+            android:text="点餐"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/comment_button"
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_blue_corners_button"
+            android:text="评论"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
 </LinearLayout>

@@ -37,6 +37,7 @@ import com.example.BaseApplication;
 import com.example.Config;
 import com.google.gson.Gson;
 import com.zdp.family.cookbook.R;
+import com.zdp.family.cookbook.activity.CommentActivity;
 import com.zdp.family.cookbook.activity.DianPingWebActivity;
 import com.zdp.family.cookbook.activity.RestaurantDetailActivity;
 import com.zdp.family.cookbook.adapter.FoodListAdapter;
@@ -63,6 +64,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 	private ImageView head_pic;
 	
 	private Button diancanButton;
+	private Button commentButton;
 	
 //	@InjectView(R.id.food_list_shipping_fee)
 //	private TextView food_list_shipping_fee;
@@ -104,6 +106,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 				R.layout.home_head_view, null);
 		head_pic = (ImageView) listHeaderView.findViewById(R.id.iv_home_head);
 		diancanButton = (Button)currentView.findViewById(R.id.diancan_bottom);
+		commentButton = (Button)currentView.findViewById(R.id.comment_button);
 		openMenu.setOnClickListener(this);
 		getDate();
 		setListener();
@@ -147,6 +150,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 			}
 		});
 		diancanButton.setOnClickListener(this);
+		commentButton.setOnClickListener(this);
 	}
 
 	private class NewDataTask extends AsyncTask<Void, Void, String> {
@@ -198,6 +202,11 @@ public class HomeFragment extends Fragment implements OnClickListener {
 		case R.id.diancan_bottom:
 			Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
 			startActivity(intent);
+			break;
+		case R.id.comment_button:
+			Intent intent1 = new Intent(getActivity(), CommentActivity.class);
+			intent1.putExtra("name", Config.RESTAURANT_NAME);
+			getActivity().startActivity(intent1);
 			break;
 		}
 	}
