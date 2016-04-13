@@ -136,6 +136,11 @@ public class RegisterActivity extends Activity {
 		if(TextUtils.isEmpty(passwordStr)){
 			Toast.makeText(context, "请输入密码", Toast.LENGTH_SHORT).show();
 			return false;
+		}else{
+			if(passwordStr.length() < 6 || passwordStr.length() > 11){
+				Toast.makeText(context, "密码长度在6-12个字符串", Toast.LENGTH_SHORT).show();
+				return false;
+			}
 		}
 		if(TextUtils.isEmpty(addressStr)){
 			Toast.makeText(context, "请输入桌号", Toast.LENGTH_SHORT).show();
@@ -145,7 +150,7 @@ public class RegisterActivity extends Activity {
 			Toast.makeText(context, "请输入手机号", Toast.LENGTH_SHORT).show();
 			return false;
 		}else{
-			if(phoneStr.length() < 6 || phoneStr.length() > 11){
+			if(phoneStr.length() != 11){
 				Toast.makeText(context, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
 				return false;
 			}

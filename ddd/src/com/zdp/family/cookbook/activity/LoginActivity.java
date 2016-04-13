@@ -7,10 +7,12 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -100,7 +102,7 @@ public class LoginActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				if (true){//"user".equals(flag)) {
+				if (check(LoginActivity.this)){//"user".equals(flag)) {
 					StringRequest request = new StringRequest(
 							Request.Method.POST, Config.IP
 									+ "cuser?method=clogin",
@@ -206,6 +208,7 @@ public class LoginActivity extends Activity {
 				}
 			}
 
+
 		});
 
 		reg.setOnClickListener(new OnClickListener() {
@@ -221,6 +224,20 @@ public class LoginActivity extends Activity {
 
 	}
 
+	private boolean check(Context context) {
+		String usernameStr = username.getText().toString();
+		String passwordStr = password.getText().toString();
+		
+		if(TextUtils.isEmpty(usernameStr)){
+			Toast.makeText(context, "请输入用户名", Toast.LENGTH_SHORT).show();
+			return false;
+		}
+		if(TextUtils.isEmpty(passwordStr)){
+			Toast.makeText(context, "请输入密码", Toast.LENGTH_SHORT).show();
+			return false;
+		}
+		return true;
+	}
 	private void saveUser(String username, String pwd) {
 		Editor ed = sp.edit();
 		ed.putString("username", username);
