@@ -127,6 +127,10 @@ public class LoginActivity extends Activity {
 										// MainActivity.this,
 										// TeacherActivity.class);
 										// startActivity(intent2);
+										Intent intent1 = new Intent(
+												LoginActivity.this,
+												AdminActivity.class);
+										startActivity(intent1);
 									} else {
 										Toast.makeText(getApplicationContext(),
 												"用户名或密码错误", 2).show();
