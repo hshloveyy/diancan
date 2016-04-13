@@ -19,12 +19,12 @@
             <include layout="@layout/login_by_username" >
             </include>
         </FrameLayout>
-        <CheckBox
-            android:id="@+id/flag" 
-             android:layout_width="1dp"
-            android:layout_height="1dp"
-            android:text=""
-            />
+<!--         <CheckBox -->
+<!--             android:id="@+id/flag"  -->
+<!--              android:layout_width="1dp" -->
+<!--             android:layout_height="1dp" -->
+<!--             android:text="" -->
+<!--             /> -->
 
         <TextView
             android:id="@+id/reg"

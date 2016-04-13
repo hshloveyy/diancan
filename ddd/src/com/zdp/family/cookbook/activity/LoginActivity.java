@@ -52,8 +52,8 @@ public class LoginActivity extends Activity {
 	@InjectView(R.id.reg)
 	private TextView reg;
 
-	@InjectView(R.id.flag)
-	private CheckBox flag;
+//	@InjectView(R.id.flag)
+//	private CheckBox flag;
 
 	private SharedPreferences sp;
 
@@ -66,17 +66,17 @@ public class LoginActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_login);
-		flag=(CheckBox) findViewById(R.id.flag);
+//		flag=(CheckBox) findViewById(R.id.flag);
 		sp = this.getSharedPreferences("user", 1);
-		flag.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-			@Override
-			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
-
-				ff = "admin";
-
-			}
-		});
+//		flag.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+//
+//			@Override
+//			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+//
+//				ff = "admin";
+//
+//			}
+//		});
 		Injector.get(this).inject();// init views
 		initView();
 		setListener();
@@ -100,7 +100,7 @@ public class LoginActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				if ("user".equals(flag)) {
+				if (true){//"user".equals(flag)) {
 					StringRequest request = new StringRequest(
 							Request.Method.POST, Config.IP
 									+ "cuser?method=clogin",
