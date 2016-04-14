@@ -6,6 +6,7 @@ import java.util.Map;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -54,8 +55,11 @@ public class CommentActivity extends Activity implements OnClickListener{
 		switch (v.getId()) {
 		case R.id.add_btn:
 			username = name.getText().toString();
-			
-			reg(username, password, phone, address, flag);
+			if(!TextUtils.isEmpty(username)){
+				reg(username, password, phone, address, flag);
+			}else{
+				Toast.makeText(getBaseContext(), "请输入评论内容", Toast.LENGTH_SHORT).show();
+			}
 			break;
 
 		default:

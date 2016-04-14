@@ -179,7 +179,7 @@ public class FoodListAdapter extends BaseAdapter implements
 	    return tools.convertViewToBitmap(text);
 	}
 
-	private int getTotal(){
+	public int getTotal(){
 		int total = 0;
 		for (int i = 0; i < foods.size(); i++) {
 			int temp = mFoodsNum[i] * Integer.valueOf(foods.get(i).getPrice());

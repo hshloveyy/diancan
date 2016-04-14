@@ -115,6 +115,7 @@ public class RestaurantDetailActivity extends Activity implements
 			public void onClick(View arg0) {
 				intent.putExtra("foodList",
 						foodListAdapter.getShopCar());
+				intent.putExtra("foodPrice", foodListAdapter.getTotal());
                 intent.setClass(RestaurantDetailActivity.this, ConfirmPayActivity.class);
                 startActivity(intent);
 			}

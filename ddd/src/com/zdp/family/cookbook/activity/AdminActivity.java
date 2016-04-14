@@ -56,6 +56,7 @@ public class AdminActivity extends Activity {
 							intent.putExtra("phone", order.getPhone());
 							intent.putExtra("name", order.getName());
 							intent.putExtra("flag", order.getFlag());
+							intent.putExtra("price", order.getPrice());
 							
 						}
 						

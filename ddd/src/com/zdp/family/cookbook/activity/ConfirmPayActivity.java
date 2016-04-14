@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -22,6 +23,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.BaseApplication;
 import com.example.Config;
+import com.zdp.aseo.content.AseoZdpAseo;
 import com.zdp.family.cookbook.R;
 
 public class ConfirmPayActivity extends Activity {
@@ -73,6 +75,13 @@ public class ConfirmPayActivity extends Activity {
 				final String username = spf.getString("username", "");
 				final String phone = spf.getString("phone", "");
 				final String address = spf.getString("address", "");
+				
+				if(TextUtils.isEmpty(username)){
+					Toast.makeText(ConfirmPayActivity.this, "请登录之后再点餐", Toast.LENGTH_SHORT).show();
+					Intent intent = new Intent (ConfirmPayActivity.this, HomePageActivity.class);	
+					startActivity(intent);
+					finish();
+				}
 				//
 				// final String code = intent.getStringExtra("code");
 				// // String username = intent.getStringExtra("username");
@@ -94,6 +103,7 @@ public class ConfirmPayActivity extends Activity {
 								if ("ok".equals(arg0)) {
 									Toast.makeText(getApplicationContext(),
 											"提交成功,我们将尽快通知后厨制作！", 2).show();
+									finish();
 								} else {
 									Toast.makeText(getApplicationContext(),
 											"提交失败", 2).show();
@@ -116,7 +126,7 @@ public class ConfirmPayActivity extends Activity {
 						hashMap.put("address", address);
 						hashMap.put("phone", phone);
 						hashMap.put("content", names);
-						hashMap.put("price", (list.size()*7)+"");
+						hashMap.put("price", getIntent().getIntExtra("foodPrice", 0) + "");
 						return hashMap;
 					}
 
